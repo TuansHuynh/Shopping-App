@@ -13,26 +13,27 @@ export default function Home() {
                     <Product
                         id= {1}
                         name= "iPhone"
+                        image=''
                         price= {100000}
                         discount= {0.1}
                         priceDiscount= {90000}
                         quantity= {100}
                         description= "1000"
                     />
-                    
                     <Product
                         id= {1}
                         name= "iPhone"
+                        image=''
                         price= {100000}
                         discount= {0.1}
                         priceDiscount= {90000}
                         quantity= {100}
                         description= "1000"
                     />
-
                     <Product
                         id= {1}
                         name= "iPhone"
+                        image=''
                         price= {100000}
                         discount= {0.1}
                         priceDiscount= {90000}
