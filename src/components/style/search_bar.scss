@@ -1,0 +1,42 @@
+@use '../../assets//global.scss' as *;
+
+.search {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 1rem;
+    transition: all 0.2s ease-in-out;
+
+    input {
+        background-color: rgb(247, 247, 247);
+        border-radius: 10px;
+        padding: 10px;
+        outline: none;
+        border: none;
+
+        &::placeholder{
+            font-size: 16px;
+        }
+
+        &:hover,
+        &:focus {
+            background-color: $bg-soft;
+
+            &::placeholder {
+                color: #000000;
+            }
+        }
+    }
+
+
+    .icon_search {
+        margin-left: 0.5rem;
+        color: $text-blue-1;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            color: $text-blue-2;
+        }
+    }
+}

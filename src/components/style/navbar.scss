@@ -1,0 +1,71 @@
+@use '../../assets/global.scss' as *;
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    .search_cart {
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+
+        .cart {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+
+            
+            .icons_cart {
+                color: $text-blue-1;
+                width: 35px;
+                padding: 2px;
+
+
+                &:hover {
+                    color: $text-blue-2;
+                }
+            
+            }
+
+            .quantity_count {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                font-size: 14px;
+                color: $text-primary;
+                background-color: $bg-blue;
+                border-radius: 50%;
+                width: 20px;
+                height: 20px;
+                margin-bottom: 25px;
+                padding: 11px;
+            }
+        }
+    }
+
+    .pages_link {
+        display: flex;
+
+        .link {
+            font-family: "Roboto", sans-serif;
+            color: $text-black;
+            text-decoration: none;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 10px;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+                background-color: $bg-soft;
+            }
+
+            &.active {
+                background-color: $bg-blue;
+                color: $text-primary;
+            }
+        }
+    }
+}
