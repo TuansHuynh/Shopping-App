@@ -16,7 +16,7 @@
             align-items: center;
             text-decoration: none;
 
-            
+
             .icons_cart {
                 color: $text-blue-1;
                 width: 35px;
@@ -26,7 +26,7 @@
                 &:hover {
                     color: $text-blue-2;
                 }
-            
+
             }
 
             .quantity_count {
@@ -44,6 +44,67 @@
                 padding: 11px;
             }
         }
+
+        .search_area {
+            position: relative;
+
+            input {
+                padding: 8px 12px;
+                font-size: 14px;
+                // border: 1px solid $border;
+                border-radius: 4px;
+                outline: none;
+                width: 250px;
+
+                &:focus {
+                    border-color: $bg-blue;
+                }
+            }
+
+            .search_results {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                max-height: 300px;
+                overflow-y: auto;
+                background-color: white;
+                // border: 1px solid $border;
+                border-radius: 6px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                z-index: 99;
+                margin-top: 5px;
+            }
+
+            .search_result_item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px 12px;
+                text-decoration: none;
+                color: $text-black;
+                font-size: 14px;
+                cursor: pointer;
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    object-fit: cover;
+                    border-radius: 4px;
+                }
+
+                &:hover {
+                    background-color: $bg-soft;
+                }
+            }
+
+            .no_results {
+                padding: 12px;
+                font-size: 14px;
+                color: gray;
+            }
+        }
+
     }
 
     .pages_link {

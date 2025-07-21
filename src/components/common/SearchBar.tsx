@@ -1,11 +1,22 @@
+// File: src/components/common/SearchBar.tsx
 import '../style/search_bar.scss'
-import { Icons } from "./Icons";
+import { Icons } from "./Icons"
 
-export default function SearchBar() {
+type Props = {
+    value: string
+    onChange: (value: string) => void
+}
+
+export default function SearchBar({ value, onChange }: Props) {
     return (
         <div className="search search_bar">
-            <input type="text" placeholder="Search..."/>
-            <Icons.Search className='icon_search'/>
+            <input
+                type="text"
+                placeholder="Search..."
+                value={value}
+                onChange={(e) => onChange(e.target.value)}
+            />
+            <Icons.Search className='icon_search' />
         </div>
     )
 }

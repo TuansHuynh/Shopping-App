@@ -1,32 +1,40 @@
-@use '../../assets//global.scss' as *;
+$text-blue-1: #007bff;
+$text-blue-2: #0056b3;
+$text-primary: #ffffff;
 
 .search {
+    position: relative;
     display: flex;
     align-items: center;
     padding: 0.25rem 1rem;
     transition: all 0.2s ease-in-out;
 
     input {
-        background-color: rgb(247, 247, 247);
+        background-color: rgba(224, 224, 255, 0.9);
         border-radius: 10px;
-        padding: 10px;
+        padding: 12px 16px;
         outline: none;
         border: none;
+        width: 250px;
+        font-size: 15px;
+        font-weight: 500;
+        color: $text-blue-2;
+        transition: all 0.2s ease-in-out;
 
-        &::placeholder{
-            font-size: 16px;
+        &::placeholder {
+            font-size: 14px;
+            color: #aaa;
         }
 
-        &:hover,
         &:focus {
-            background-color: $bg-soft;
+            border-radius: 20px;
+            box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.3);
 
             &::placeholder {
-                color: #000000;
+                color: rgb(60, 60, 255);
             }
         }
     }
-
 
     .icon_search {
         margin-left: 0.5rem;
@@ -38,5 +46,48 @@
         &:hover {
             color: $text-blue-2;
         }
+    }
+
+    // 👉 Khu vực hiển thị gợi ý sản phẩm
+    .search_results {
+        position: absolute;
+        top: 110%;
+        left: 0;
+        width: 100%;
+        max-height: 300px;
+        overflow-y: auto;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        z-index: 10;
+    }
+
+    .search_result_item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        cursor: pointer;
+
+        img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        &:hover {
+            background-color: #f2f2f2;
+        }
+    }
+
+    .no_results {
+        padding: 12px;
+        font-size: 14px;
+        color: #888;
     }
 }

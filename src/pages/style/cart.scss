@@ -1,0 +1,20 @@
+.cart_ {
+    display: flex;
+    justify-content: center;
+
+    .cart_item_container {
+        width: 100%;
+        margin: 10px;
+    }
+
+    .payment {
+        width: 90vh;
+    }
+
+    .empty_cart {
+        text-align: center;
+        padding: 40px;
+        font-size: 1.2rem;
+        color: #888;
+    }
+}

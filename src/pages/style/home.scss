@@ -1,82 +1,23 @@
+$text-color-normal: #000000;
+
 .home {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-
-    .box {
-        padding: 1.5rem;
-        border-radius: 1rem;
-        font-size: 1.5rem;
-        font-weight: bold;
-        text-align: center;
-        color: #fff;
-
-        &.box1 {
-            background: linear-gradient(135deg, #2196f3, #21cbf3);
-        }
-
-        &.box3 {
-            background: linear-gradient(135deg, #4caf50, #81c784);
-        }
-
-        &.box4 {
-            background: linear-gradient(135deg, #ff9800, #ffb74d);
-        }
-
-        &.box5 {
-            background: linear-gradient(135deg, #9c27b0, #ce93d8);
-        }
-    }
 
     .link_product {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        padding: 20px;
+        gap: 20px;
 
         .link {
+            display: flex;
+            justify-content: center;
             text-decoration: none;
+            color: $text-color-normal;
 
-            .box2 {
-                background: #fff;
-                border: 1px solid #ddd;
-                border-radius: 0.8rem;
-                padding: 1rem;
-                text-align: center;
-                transition: all 0.3s ease;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-
-                &:hover {
-                    transform: translateY(-5px);
-                    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-                }
-
-                img {
-                    width: 100%;
-                    max-height: 180px;
-                    object-fit: contain;
-                    margin-bottom: 1rem;
-                    border-radius: 0.5rem;
-                }
-
-                div {
-                    margin-bottom: 0.3rem;
-                    font-size: 1rem;
-                    color: #333;
-                }
-
-                div:nth-child(3) {
-                    text-decoration: line-through;
-                    color: #999;
-                    font-size: 0.9rem;
-                }
-
-                div:nth-child(4) {
-                    color: #e53935;
-                    font-weight: bold;
-                    font-size: 1.1rem;
-                }
+            &:hover {
+                color: rgb(72, 59, 255);
             }
         }
     }
+
 }

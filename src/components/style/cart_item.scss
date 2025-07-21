@@ -1,0 +1,110 @@
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #fff;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease-in-out;
+
+    .item-info {
+        display: flex;
+        gap: 16px;
+
+        .product-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .product-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .product-name {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 6px;
+            }
+
+            .product-price {
+                font-size: 16px;
+                color: #666;
+            }
+        }
+    }
+
+    .item-actions {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 12px;
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+
+            button {
+                padding: 8px 12px;
+                font-size: 18px;
+                background-color: #f4f4f4;
+                border: none;
+                cursor: pointer;
+            }
+
+            input {
+                width: 40px;
+                height: 36px;
+                text-align: center;
+                border: none;
+                outline: none;
+                background: #fff;
+            }
+        }
+
+        .subtotal {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .item-actions-bottom {
+            display: flex;
+            gap: 16px;
+            font-size: 14px;
+
+            .save-later,
+            .remove {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+
+                svg {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            .save-later {
+                color: #d63384;
+                cursor: pointer;
+            }
+
+            .remove {
+                color: #dc3545;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &:hover{
+        transform: translateY(-3px);
+        background-color: #f1f1f1;
+    }
+}
